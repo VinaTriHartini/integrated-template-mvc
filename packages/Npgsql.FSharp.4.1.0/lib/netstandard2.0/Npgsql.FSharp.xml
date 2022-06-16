@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>Npgsql.FSharp</name></assembly>
+<members>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.uuidArray(System.String)">
+<summary>
+ Gets the value of the specified column as a globally-unique identifier (GUID).
+</summary>
+</member>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.uuid(System.String)">
+<summary>
+ Gets the value of the specified column as a globally-unique identifier (GUID).
+</summary>
+</member>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.textOrValueNone(System.String)">
+ <summary>Alias for reading stringOrValueNone</summary>
+</member>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.textOrNone(System.String)">
+ <summary>Alias for reading stringOrNone</summary>
+</member>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.text(System.String)">
+ <summary>Alias for reading string</summary>
+</member>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.pointOrNone(System.String)">
+<summary>
+ Gets the value of the specified column as an `NpgsqlTypes.NpgsqlPoint`
+</summary>
+</member>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.point(System.String)">
+<summary>
+ Gets the value of the specified column as an `NpgsqlTypes.NpgsqlPoint`
+</summary>
+</member>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.int16(System.String)">
+<summary>
+ Gets the value of the specified column as a 16-bit signed integer.
+
+ Can be used to read columns of type `smallint` or `int16`
+</summary>
+</member>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.floatOrNone(System.String)">
+<summary>
+ Gets the value of the specified column as a `System.Single` object.
+</summary>
+</member>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.float(System.String)">
+<summary>
+ Gets the value of the specified column as a `System.Single` object.
+</summary>
+</member>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.fieldValue``1(System.String)">
+<summary>
+ Get the column value as the type specified in the type parameter.
+ Can be used when the package is used in conjuction with the Json.NET type plugin for npgsql.
+</summary>
+</member>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.decimalOrValueNone(System.String)">
+ <summary>Reads the column value as decimal or returns ValueNone when the column is null</summary>
+</member>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.decimalOrNone(System.String)">
+ <summary>Reads the column value as decimal or returns None when the column is null</summary>
+</member>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.decimal(System.String)">
+ <summary>Reads the column value as decimal</summary>
+</member>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.datetimeOffsetOrValueNone(System.String)">
+<summary>
+ Reads the given column of type timestamptz as DateTimeOffset.
+ PostgreSQL stores the values of timestamptz as UTC in the database.
+ However, when Npgsql reads those values, they are converted to local offset of the machine running this code.
+ See https://www.npgsql.org/doc/types/datetime.html#detailed-behavior-reading-values-from-the-database
+ This function however, converts it back to UTC the same way it was stored.
+</summary>
+</member>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.datetimeOffsetOrNone(System.String)">
+<summary>
+ Reads the given column of type timestamptz as DateTimeOffset.
+ PostgreSQL stores the values of timestamptz as UTC in the database.
+ However, when Npgsql reads those values, they are converted to local offset of the machine running this code.
+ See https://www.npgsql.org/doc/types/datetime.html#detailed-behavior-reading-values-from-the-database
+ This function however, converts it back to UTC the same way it was stored.
+</summary>
+</member>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.datetimeOffset(System.String)">
+<summary>
+ Reads the given column of type timestamptz as DateTimeOffset.
+ PostgreSQL stores the values of timestamptz as UTC in the database.
+ However, when Npgsql reads those values, they are converted to local offset of the machine running this code.
+ See https://www.npgsql.org/doc/types/datetime.html#detailed-behavior-reading-values-from-the-database
+ This function however, converts it back to UTC the same way it was stored.
+</summary>
+</member>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.dateTimeOrNone(System.String)">
+<summary>
+ Gets the value of the specified column as a System.DateTime object.
+</summary>
+</member>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.dateTime(System.String)">
+<summary>
+ Gets the value of the specified column as a System.DateTime object.
+</summary>
+</member>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.byteaOrValueNone(System.String)">
+ <summary>Reads the specified column as byte[] or returns ValueNone when the column value is null</summary>
+</member>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.byteaOrNone(System.String)">
+ <summary>Reads the specified column as byte[] or returns None when the column value is null</summary>
+</member>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.bytea(System.String)">
+ <summary>Reads the specified column as byte[]</summary>
+</member>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.boolOrValueNone(System.String)">
+ <summary>Reads a column as a boolean value or returns ValueNone when the column value is null</summary>
+</member>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.boolOrNone(System.String)">
+ <summary>Reads a column as a boolean value or returns None when the column value is null</summary>
+</member>
+<member name="M:CommonExtensionsAndTypesForNpgsqlFSharp.RowReader.bool(System.String)">
+ <summary>Reads a column as a boolean value</summary>
+</member>
+<member name="T:Npgsql.FSharp.SslMode.Require">
+<summary>
+ Fail the connection if the server doesn&apos;t support SSL.
+</summary>
+</member>
+<member name="T:Npgsql.FSharp.SslMode.Prefer">
+<summary>
+ Prefer SSL connections if the server allows them, but allow connections without SSL.
+</summary>
+</member>
+<member name="T:Npgsql.FSharp.SslMode.Disable">
+<summary>
+ SSL is disabled. If the server requires SSL, the connection will fail.
+</summary>
+</member>
+<member name="T:Npgsql.FSharp.SslMode">
+<summary>
+ Specifies how to manage SSL.
+</summary>
+</member>
+<member name="M:Npgsql.FSharp.Sql.executeNonQueryAsync(Npgsql.FSharp.Sql.SqlProps)">
+<summary>
+ Executes the query as asynchronously and returns the number of rows affected
+</summary>
+</member>
+<member name="M:Npgsql.FSharp.Sql.executeNonQuery(Npgsql.FSharp.Sql.SqlProps)">
+<summary>
+ Executes the query and returns the number of rows affected
+</summary>
+</member>
+<member name="M:Npgsql.FSharp.Sql.createConnection(Npgsql.FSharp.Sql.SqlProps)">
+<summary>
+ Creates or returns the SQL connection used to execute the SQL commands
+</summary>
+</member>
+<member name="M:Npgsql.FSharp.Sql.skipAnalysis(Npgsql.FSharp.Sql.SqlProps)">
+<summary>
+ When using the Npgsql.FSharp.Analyzer, this function annotates the code to tell the analyzer to ignore and skip the SQL analyzer against the database.
+</summary>
+</member>
+<member name="M:Npgsql.FSharp.Sql.parameters(Microsoft.FSharp.Collections.FSharpList{System.Tuple{System.String,CommonExtensionsAndTypesForNpgsqlFSharp.SqlValue}},Npgsql.FSharp.Sql.SqlProps)">
+<summary>
+ Provides the SQL parameters for the query
+</summary>
+</member>
+<member name="M:Npgsql.FSharp.Sql.query(System.String,Npgsql.FSharp.Sql.SqlProps)">
+<summary>
+ Configures the SQL query to execute
+</summary>
+</member>
+<member name="M:Npgsql.FSharp.Sql.existingConnection(Npgsql.NpgsqlConnection)">
+<summary>
+ Uses an existing connection to execute SQL commands against
+</summary>
+</member>
+<member name="M:Npgsql.FSharp.Sql.fromUriToConfig(System.Uri)">
+<summary>
+ Creates initial database connection configration from a the Uri components.
+ It try to find `Host`, `Username`, `Password`, `Database` and `Port` from the input `Uri`.
+</summary>
+</member>
+<member name="M:Npgsql.FSharp.Sql.fromUri(System.Uri)">
+<summary>
+ Turns the given postgres Uri into a proper connection string
+</summary>
+</member>
+<member name="M:Npgsql.FSharp.Sql.port(System.Int32,Npgsql.FSharp.Sql.ConnectionStringBuilder)">
+<summary>
+ Specifies the port of the database server. If you don&apos;t specify the port, the default port of `5432` is used.
+</summary>
+</member>
+<member name="M:Npgsql.FSharp.Sql.sslMode(Npgsql.FSharp.SslMode,Npgsql.FSharp.Sql.ConnectionStringBuilder)">
+<summary>
+ Specifies how to manage SSL Mode.
+</summary>
+</member>
+<member name="M:Npgsql.FSharp.Sql.database(System.String,Npgsql.FSharp.Sql.ConnectionStringBuilder)">
+<summary>
+ Specifies the database name
+</summary>
+</member>
+<member name="M:Npgsql.FSharp.Sql.password(System.String,Npgsql.FSharp.Sql.ConnectionStringBuilder)">
+<summary>
+ Specifies the password of the user that is logging in into the database server
+</summary>
+</member>
+</members>
+</doc>
